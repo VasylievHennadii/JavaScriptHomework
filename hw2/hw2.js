@@ -218,7 +218,7 @@ const price = {
 price.getPrice = getPrice;
 price.getPriceWithDiscount = getPriceWithDiscount;
 console.log(`Цена объекта price: ${price.getPrice()}`);
-console.log(`Цена с дисконтом объекта price: ${price.getPriceWithDiscount()}`);
+console.log(`Цена с дисконтом ${price.discount} объекта price: ${price.getPriceWithDiscount()}`);
 
 function getPrice () {        
     return parseFloat(this.price);
@@ -235,7 +235,7 @@ const dublePrice = {
     getPriceWithDiscount
 }
 console.log(`Цена объекта dublePrice: ${dublePrice.getPrice()}`);
-console.log(`Цена с дисконтом объекта dublePrice: ${dublePrice.getPriceWithDiscount()}`);
+console.log(`Цена с дисконтом ${dublePrice.discount} объекта dublePrice: ${dublePrice.getPriceWithDiscount()}`);
 
 
 
