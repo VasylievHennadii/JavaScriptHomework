@@ -32,8 +32,8 @@ let min = 10; // минимальная цена
 let max = 20; // максимальная цена
 
 // Написать условие **если цена товара больше или равна минимальной цене и меньше или равна максимальной цене** то вывести в консоль название этого товара, иначе вывести в консоль что товар не найден.
-
-if(parseFloat(product.price) >= min && parseFloat(product.price) <= max){
+let parseProductPrice = parseFloat(product.price);
+if(parseProductPrice >= min && parseProductPrice <= max){
     console.log(product.name);
 } else{
     console.log('товар не найден');
