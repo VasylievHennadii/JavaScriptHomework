@@ -47,6 +47,18 @@ console.log(map);
 const newArr = users.map(user => ({_id: user._id, name: user.name, isActive: user.isActive, balance: user.balance}));
 console.log(newArr);
 
+// more correct solution
+function foo(users, map) {
+    let res = [];        
+    for (let user of users) { 
+        let obj = {}; 
+        for (let field of map) {  
+            obj[field] = user[field];                                  
+        }                    
+        res.push(obj); 
+    } return res;    
+}
+console.log(foo(users, map));
     
 
 // 2. Дан массив объектов, где каждый объект содержит информацию о букве и месте её положения в строке {буква: “a”, позиция_в_предложении: 1}:
@@ -121,7 +133,7 @@ console.log(person.newName);
 
 
 
-
+// Время и Дата - вывод на экран
 let today = new Date();   
 now=new Date();
 document.write("<h2> Время: " +now.toLocaleTimeString()+ "</h2>");
