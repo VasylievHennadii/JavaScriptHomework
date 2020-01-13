@@ -98,6 +98,7 @@ console.log(getInfo(organisation));
 
 
 // 4. Дан объект:
+// Сделать так что-бы при получении или изменении свойства **name** в свойствах **lastGet** и **lastUpdate** сохранялась дата последнего получения или последнего обновления соответственно.
 console.log('task 4');
 const person = {
     name: 'Denis',
@@ -105,31 +106,59 @@ const person = {
     lastGet: '11/22/2019',
     lastUpdate: '11/22/2019',
     get newName() {
-        return `name: ${this.name}; date lastGet: ${this.lastGet}; date lastUpdate: ${this.lastUpdate}`;
+        this.lastGet = Date.now();
+        return this.name;
     },
-    set newName(value) {          
-        if(this.name !== value){ 
-            let data1 = new Date();                                              
-            this.lastGet = data1.toLocaleDateString() +' '+ data1.toLocaleTimeString();
-            this.name = value;            
-        } else { 
-            let data2 = new Date();
-            this.lastUpdate = data2.toLocaleDateString() +' '+ data2.toLocaleTimeString();                      
-        }                
+    set newName(value) {
+        this.lastUpdate = Date.now();      
+        if(this.name !== value){
+            this.name = value;         
+        }           
     }
 };
+
 console.log(person);
-console.log(person.name);
-console.log(person.newName);
+person.newName;
+console.log(person);
+person.newName = "Tanya";
+console.log(person);
+person.newName = "Tanya";
+console.log(person);
+person.newName = "Tanya";
+console.log(person);
+person.newName = "Tanya";
+console.log(person);
+person.newName;
 person.newName = 'Denis';
-console.log(person.name);
-console.log(person.newName);
+console.log(person);
+person.newName = 'Denis';
+console.log(person);
+person.newName = 'Denis';
+console.log(person);
+person.newName = 'Denis';
+console.log(person);
+person.newName;
 person.newName = 'Max';
-console.log(person.name);
-console.log(person.newName);
-
-// Сделать так что-бы при получении или изменении свойства **name** в свойствах **lastGet** и **lastUpdate** сохранялась дата последнего получения или последнего обновления соответственно. 
-
+console.log(person);
+person.newName = 'Max';
+console.log(person);
+person.newName = 'Max';
+console.log(person);
+person.newName = 'Max';
+console.log(person);
+person.newName = 'Max';
+console.log(person);
+person.newName = 'Max';
+console.log(person);
+person.newName;
+person.newName = "Tanya";
+console.log(person);
+person.newName = "Tanya";
+console.log(person);
+person.newName = "Tanya";
+console.log(person);
+person.newName = "Tanya";
+console.log(person);
 
 
 
