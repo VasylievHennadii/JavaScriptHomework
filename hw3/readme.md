@@ -3,7 +3,9 @@
 1. На основе массива **map** и массива **users** собрать новый массив объектов где в каждом объекте будут только те свойства которые перечислены в массиве **map**
 
     const map = ["_id", "name", "isActive", "balance"];
+
     const users = [
+
       {
         "_id": "5d220b10e8265cc978e2586b",
         "isActive": true,
@@ -16,6 +18,7 @@
         "phone": "+1 (850) 411-2997",
         "registered": "2018-08-13T04:28:45 -03:00"
       },
+
       {
         "_id": "5d220b10144ef972f6c2b332",
         "isActive": true,
@@ -28,6 +31,7 @@
         "phone": "+1 (943) 463-2496",
         "registered": "2016-12-09T05:15:34 -02:00"
       },
+
       {
         "_id": "5d220b1083a0494655cdecf6",
         "isActive": false,
@@ -59,11 +63,16 @@
 3. Организовать функцию getInfo, которая принимает объект вида**{ name: ..., info: { employees: [...], partners: [ … ] } }**и выводит в консоль имя (если имени нет, показывать ‘Unknown’) и первые две компании из массива partners:
 
     **const** organisation = { 
+
       name: 'Google', 
+
       info: { 
+
         employees: ['Vlad', 'Olga'], 
+
         partners: ['Microsoft', 'Facebook', 'Xing'] 
     } };
+    
     // *getInfo*(organisation); → Name: Google Partners: Microsoft Facebook
 
 4. Дан объект:
